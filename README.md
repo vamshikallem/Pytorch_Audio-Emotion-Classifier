@@ -17,20 +17,7 @@ convert time domain signals into frequency domain signal by mimicking cochlea fu
 is done to set length of all torch tensors to same length.
 
 # Simple Convolutional Network
-model_CNN = nn.Sequential(
-    nn.Conv2d(1,32,3,stride=2,padding=1), ## inshape(1,40,158)
-    ## outshape(5,32,20,79)
-    nn.BatchNorm2d(32),
-    nn.ReLU(),
-    nn.MaxPool2d(2,2), ## outshape (5,32,10,39) 
-    nn.Conv2d(32,32,3,stride=2,padding=1), ## outshape(5,32,5,20)
-    nn.BatchNorm2d(32),
-    nn.ReLU(),
-    nn.MaxPool2d(2,2),## outshape(5,32,2,10)
-    nn.Flatten(),##shape(5,640)
-    nn.Linear(640,128), # outshape(5,128)
-    nn.Linear(128,15) ## (5,number of classes)
-    )
+![Screenshot (7)](https://user-images.githubusercontent.com/70043813/90946705-73f6b300-e3fd-11ea-8c86-d82f1803200b.png)
 Could have worked on much sophisticated model but the data size on which we are training a simple network is taking a whole day to run.
 Much bigger and better model would fetch best results but that goes out of scope in aspects of time and computational expenses for an academic project.
 
