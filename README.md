@@ -33,3 +33,4 @@ model_CNN = nn.Sequential(
     )
 Could have worked on much sophisticated model but the data size on which we are training a simple network is taking a whole day to run.
 Much bigger and better model would fetch best results but that goes out of scope in aspects of time and computational expenses for an academic project.
+
